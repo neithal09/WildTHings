@@ -34,7 +34,7 @@ import {
 
 const NAV_ITEMS = [
   { icon: Home, label: "Bedroom" },
-  { icon: Search, label: "Crave" },
+  // { icon: Search, label: "Crave" },
   { icon: PlusCircle, label: "Tempt" },
   { icon: Users, label: "Confess" },
   { icon: User, label: "Mine" },
@@ -96,9 +96,14 @@ const FEED_CARDS = [
 ];
 
 const SHOWS = [
-  { title: "No Hands Needed", episodes: 8, badge: "Featured" },
-  { title: "When Loud Is The Only Option", episodes: 12, badge: "New" },
-  { title: "Midnight Thoughts", episodes: 6, badge: "Drop" },
+  { title: "No Hands Needed", episodes: 8, badge: "Featured", image: "/2.jpg" },
+  {
+    title: "When Loud Is The Only Option",
+    episodes: 12,
+    badge: "New",
+    image: "/1.png",
+  },
+  { title: "Midnight Thoughts", episodes: 6, badge: "Drop", image: "/3.png" },
 ];
 
 const EXPERTS = [
@@ -355,7 +360,18 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-chocolate text-cream font-sans">
+    <div className="min-h-screen bg-chocolate text-cream font-sans relative">
+      <div
+        aria-hidden
+        className="fixed inset-0 pointer-events-none z-0"
+        style={{
+          backgroundImage: "url('/3.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          opacity: 0.12,
+        }}
+      />
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
         * { font-family: 'Inter', sans-serif; }
@@ -380,11 +396,11 @@ export default function App() {
               alt=""
               className="h-9 md:h-10 w-auto object-contain"
             />
-            <img
+            {/* <img
               src="/wiildthing-wordmark.png"
               alt="WiildThing"
               className="h-7 md:h-8 w-auto object-contain"
-            />
+            /> */}
           </a>
 
           <nav className="hidden lg:flex items-center gap-1 ml-2">
@@ -407,7 +423,7 @@ export default function App() {
             })}
           </nav>
 
-          <div className="hidden md:flex items-center gap-2 bg-violet/20 border border-martini/20 rounded-full px-4 py-2 ml-auto w-56">
+          <div className="hidden md:flex items-center gap-2 bg-violet/20 border border-martini/20 rounded-full px-2 py-2 ml-auto w-56">
             <Search size={14} className="text-cream/40" />
             <input
               placeholder="What are you craving today?"
@@ -729,9 +745,19 @@ export default function App() {
                 key={show.title}
                 className="bg-violet/15 hover:bg-violet/25 border border-martini/15 rounded-2xl p-5 card-hover cursor-pointer"
               >
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-martini to-rust flex items-center justify-center mb-3">
-                  <Video size={18} className="text-chocolate" />
-                </div>
+                {show.image ? (
+                  <div className="w-full h-32 rounded-xl overflow-hidden mb-3">
+                    <img
+                      src={show.image}
+                      alt={show.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-martini to-rust flex items-center justify-center mb-3">
+                    <Video size={18} className="text-chocolate" />
+                  </div>
+                )}
                 <div className="flex items-start justify-between mb-1">
                   <h3 className="font-bold text-sm text-cream">{show.title}</h3>
                   <span className="text-xs bg-martini/20 text-martini px-2 py-0.5 rounded-full font-medium">
