@@ -37,7 +37,7 @@ const NAV_ITEMS = [
   // { icon: Search, label: "Crave" },
   { icon: PlusCircle, label: "Tempt" },
   { icon: Users, label: "Confess" },
-  { icon: User, label: "Mine" },
+  // { icon: User, label: "Mine" },
 ];
 
 const TRENDING_TAGS = [
