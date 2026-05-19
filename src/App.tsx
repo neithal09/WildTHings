@@ -119,7 +119,7 @@ const CONTENT_PILLARS = [
   },
   {
     icon: BookOpen,
-    title: "Dirty Talk",
+    title: "Wild Talk",
     desc: "A page out of an unputdownable erotica.",
     formats: ["Letters Unsealed", "Confessions", "Bedtime Stories"],
     accent: "#6D457C",
@@ -162,8 +162,7 @@ const CONTENT_PILLARS = [
 const COMMUNITY_POSTS = [
   {
     anon: true,
-    title:
-      "Wide awake. Must be thinking about us. Anyone else still up?",
+    title: "Wide awake. Must be thinking about us. Anyone else still up?",
     replies: 124,
     expert: false,
     upvotes: 892,
@@ -196,7 +195,11 @@ const GAMIFICATION = [
 ];
 
 const REWARDS = [
-  { icon: Gift, label: "Turn us on, turn the price down", color: "text-rust-light" },
+  {
+    icon: Gift,
+    label: "Turn us on, turn the price down",
+    color: "text-rust-light",
+  },
   { icon: ShoppingBag, label: "Free indulgences", color: "text-martini" },
   { icon: Crown, label: "Certified Wiildthing", color: "text-cream" },
   { icon: Zap, label: "First taste access", color: "text-martini-lightest" },
@@ -413,11 +416,17 @@ export default function App() {
           </div>
 
           <div className="flex items-center gap-2 ml-auto md:ml-0">
-            <button className="relative p-2 rounded-full hover:bg-violet/20 transition-colors" aria-label="Notifications">
+            <button
+              className="relative p-2 rounded-full hover:bg-violet/20 transition-colors"
+              aria-label="Notifications"
+            >
               <Bell size={18} className="text-cream/60" />
               <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-rust rounded-full" />
             </button>
-            <button className="relative p-2 rounded-full hover:bg-violet/20 transition-colors" aria-label="The velvet drawer">
+            <button
+              className="relative p-2 rounded-full hover:bg-violet/20 transition-colors"
+              aria-label="The velvet drawer"
+            >
               <Store size={18} className="text-cream/60" />
               <span className="absolute top-1 right-1 min-w-[16px] h-4 px-1 text-[10px] font-bold bg-martini text-chocolate rounded-full flex items-center justify-center">
                 2
@@ -509,8 +518,8 @@ export default function App() {
             <span className="gradient-text italic">bad decisions.</span>
           </h1>
           <p className="text-cream/60 text-lg max-w-xl mx-auto mb-8 leading-relaxed">
-            We don't deal in caution. We deal in heat. We deal in hunger.
-            The wild thing within you is eternal — and here, it has a home.
+            We don't deal in caution. We deal in heat. We deal in hunger. The
+            wild thing within you is eternal — and here, it has a home.
           </p>
           <div className="flex items-center justify-center gap-3 flex-wrap">
             <button className="bg-gradient-to-r from-martini to-martini-light text-chocolate font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity text-sm">
@@ -759,7 +768,8 @@ export default function App() {
         <section className="mb-12">
           <div className="flex items-center justify-between mb-6">
             <h2 className="font-display text-2xl font-semibold flex items-center gap-2 text-cream">
-              <BadgeCheck size={18} className="text-martini" /> Keepers of Secrets
+              <BadgeCheck size={18} className="text-martini" /> Keepers of
+              Secrets
             </h2>
             <button className="text-martini text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all">
               Meet them all <ChevronRight size={14} />
@@ -796,7 +806,7 @@ export default function App() {
         <section className="mb-12">
           <div className="text-center mb-8">
             <h2 className="font-display text-4xl font-semibold mb-2 text-cream">
-              The Many Volumes of Want
+              The Many Volumes of Desire
             </h2>
             <p className="text-cream/50 text-sm">
               An unfinished book with nine more volumes, yet to be conceived
@@ -1074,7 +1084,10 @@ export default function App() {
                   "Blurred Until You Want It",
                   "Images stay hidden until your fingers say so.",
                 ],
-                ["Vanishing Sessions", "Search and history disappear after every visit."],
+                [
+                  "Vanishing Sessions",
+                  "Search and history disappear after every visit.",
+                ],
               ].map(([title, desc]) => (
                 <div key={title} className="flex items-start gap-3">
                   <div className="w-5 h-5 rounded-full bg-martini/20 flex items-center justify-center shrink-0 mt-0.5">
@@ -1101,23 +1114,23 @@ export default function App() {
               className="absolute inset-0 w-full h-full object-cover opacity-15 pointer-events-none"
             />
             <div className="relative">
-            <h2 className="font-display text-5xl font-semibold mb-3 text-cream">
-              We take you there.
-              <br />
-              <span className="gradient-text italic">And then some.</span>
-            </h2>
-            <p className="text-cream/60 text-sm mb-6 max-w-md mx-auto">
-              No fear in this journey, only the promise of discovery.
-              Let the fire take you.
-            </p>
-            <div className="flex items-center justify-center gap-3 flex-wrap">
-              <button className="bg-gradient-to-r from-martini to-martini-light text-chocolate font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
-                You in?
-              </button>
-              <button className="bg-violet/40 border border-martini/30 text-cream font-semibold px-8 py-3 rounded-full hover:bg-violet/60 transition-colors">
-                Take it home
-              </button>
-            </div>
+              <h2 className="font-display text-5xl font-semibold mb-3 text-cream">
+                We take you there.
+                <br />
+                <span className="gradient-text italic">And then some.</span>
+              </h2>
+              <p className="text-cream/60 text-sm mb-6 max-w-md mx-auto">
+                No fear in this journey, only the promise of discovery. Let the
+                fire take you.
+              </p>
+              <div className="flex items-center justify-center gap-3 flex-wrap">
+                <button className="bg-gradient-to-r from-martini to-martini-light text-chocolate font-bold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">
+                  You in?
+                </button>
+                <button className="bg-violet/40 border border-martini/30 text-cream font-semibold px-8 py-3 rounded-full hover:bg-violet/60 transition-colors">
+                  Take it home
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -1125,7 +1138,8 @@ export default function App() {
         {/* FOOTER */}
         <footer className="text-center text-cream/30 text-xs py-4 border-t border-martini/15">
           <p>
-            © 2026 WiildThing. The wild thing within you is eternal — and here, it has a home.
+            © 2026 WiildThing. The wild thing within you is eternal — and here,
+            it has a home.
           </p>
         </footer>
       </main>
